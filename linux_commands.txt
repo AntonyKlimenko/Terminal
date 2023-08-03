@@ -1,0 +1,39 @@
+1. Посмотреть где я - pwd
+2. Создать папку - mkdir 1-folder
+3. Перейти в папку - cd 1-folder
+4. Создайте 3 папки - mkdir 2-folder 3-folder 4-folder
+5. Зайти в любую папку - cd 3-folder
+6. Создать 5 файлов (3 txt, 2 json) - touch 1-file.txt 2-file.txt 3-file.txt 4-file.json 5-file.json
+7. Создать 3 папки - mkdir 5-folder 6-folder 7-folder
+8. Вывести содержимое папки - ls -la (ls 4-folder)
+9. Открыть любой txt файл - vim 1-file.txt
+10. Написать туда что-нибудь - *I* *There is some code here* (+10 enter) *Some bug is hided there!*
+11. Сохранить и выйти *ESC* :wq
+12. Выйти из папки на уровень выше cd ..
+13. Переместить любые 2 файла, которые вы создали, в любую другую папку - mv 4-file.json 5-file.json 5-folder/
+14. Скопировать любые 2 файла, которые вы создали, в любую другую папку - cp 2-file.txt 3-file.txt 6-folder/
+15. Найти файл по имени - find -iname 5-file.json
+16. Посмотреть содержимое в реальном времени (grep) - grep -rn "There is some code here"
+17. Вынести несколько первых строк из текстового файла - head -5 1-file.txt
+18. Вынести несколько последний строк из текстового файла - tail -5 1-file.txt
+19. Посмотреть содержимое длинного файла (команда less) less -s 1-file.txt
+20. Вывести дату и время - date
+
+
+
+Задания *
+1. Отправить http запрос на сервер curl "http://162.55.220.72:5005/terminal-hw-request"
+- curl "http://162.55.220.72:5005/terminal-hw-request"
+- сurl "http://162.55.220.72:5005/get_method?name=Anthony&age=28"
+2. Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+mkdir 1-folder
+cd 1-folder
+mkdir 2-folder 3-folder 4-folder
+cd 3-folder
+touch 1-file.txt 2-file.txt 3-file.txt 4-file.json 5-file.json
+mkdir 5-folder 6-folder 7-folder
+ls -la
+mv 1-file.txt 2-file.txt 7-folder
